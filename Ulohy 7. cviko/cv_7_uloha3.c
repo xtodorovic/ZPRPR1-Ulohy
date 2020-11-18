@@ -10,9 +10,9 @@ void vynasob(int *cislo1, int *cislo2, int *s)
 	*s = *cislo1 * *cislo2; //musi byt oddelene medzerou 
 }
 
-void vysledok(int s)
+void vysledok(int *s)
 {
-	printf("Vysledok je: %d", s);
+	printf("Vysledok je: %d", *s);
 }
 
 int main()
@@ -24,7 +24,7 @@ int main()
 	scanf("%d", &cislo1);
 	
 	vynasob(&cislo1, &cislo2, &s);
-	vysledok(s); 
+	vysledok(&s); 
 	
 	return 0;
 }
